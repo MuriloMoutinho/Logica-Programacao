@@ -1,0 +1,63 @@
+O encontro dos “pequenos grandes sábios”
+Estamos no ano de 2100 e a população mundial no planeta Terra já ultrapassou o número
+de 11,2 bilhões de pessoas. Com a descoberta de novas vacinas e curas para doenças outrora
+consideradas epidêmicas como o Câncer, AIDS, dengue hemorrágica, gripe suína II e gripe
+aviária II e III, o crescimento populacional segue um ritmo ainda mais acelerado e a
+humanidade se depara com novos problemas para resolver. A falta de água potável, desgelo
+das camadas polares e a consequente inundação de territórios habitados, a escassez de
+alimentos naturais, efeitos colaterais dos alimentos sintéticos, construção de um idioma
+internacional, leis planetárias, uma moeda global, cyber-democracia e outras questões ainda
+sem solução precisam de medidas efcazes antes que a civilização entre em um novo colapso.
+Para tratar destas questões, os assim chamados “pequenos grandes sábios” do mundo
+resolveram se reunir em uma das grandes metrópoles para debater entre si e construir
+soluções. Chegando lá, no entanto, a quantidade de pessoas era tão grande na metrópole que
+não conseguiram localizar uns aos outros.
+Você foi chamad@ para ajudar a localizar os pequenos grandes sábios, construindo um
+algorítimo para drones que encontre os sábios. Do alto, os drones deverão procurar pelos
+pequenos grandes sábios na multidão, que são captados pelos sensores óticos como letras
+minúsculas. Contudo, os drones precisam distinguir os pequenos grandes sábios dos “falsos
+sábios” e dos “anões esquisitões” através da quantidade de “grandes seguranças” que
+acompanham os pequenos grandes sábios. Cada pequeno grande sábio pode ser distinguido
+de outros elementos na multidão por andar sempre acompanhado de PRECISAMENTE três
+grandes seguranças de cada lado (esquerda e direita). Os seguranças são percebidos pelos
+sensores óticos dos drones como letras maiúsculas.
+Entrada
+A entrada é composta por um texto de uma ou mais linhas contendo letras minúsculas e
+maiúsculas sem espaços entre si representando a multidão na metrópole.
+Saída
+A saída é uma linha composta por letras minúsculas representando o conjunto dos
+“pequenos grandes sábios” identifcados na multidão.
+
+
+
+/*code*/
+entrada = input("input")
+saida = ""
+
+for index, letra in enumerate(entrada):
+    if(index > 3 and index < len(entrada)-3):
+        if(letra.islower()):
+            if(entrada[index-3: index].isupper() and entrada[index+1: index+4].isupper()):
+                if(entrada[index == 3]):
+                    if(entrada[index+4].islower()):
+                        saida += letra;
+                elif(index == len(entrada)-3):
+                    if(entrada[index-4].islower()):
+                        saida += letra;
+                else:
+                    if(entrada[index-4].islower() and entrada[index+4].islower()):
+                        saida += letra;
+print(saida)
+
+
+
+/*inputs*/
+Entrada de exemplo 1
+kAewtloYgcFQaJNhHVGaXDAgZJFcpYbzxlWrVcqsmUbCunkfxzWDZuUZMiGqhrRIUaGMYmvnJIHEmbT
+Saída de exemplo 1
+agua
+
+Entrada de exemplo 2
+TbmEHIJnvmYMGcUIRrhqGiMZUuZDWzxfknuCbTOKazgVKoiUsuemONwHeyCVCuUBkbAMifDjSeyplNXUSPpvzJCFZmLTJQGPRVuSVtZUujsLwtqcGoEkaUmsqcVrWlxzbYpcFJZrADXaGVHhNJaQFcgYoltweA
+Saída de exemplo 2
+cura

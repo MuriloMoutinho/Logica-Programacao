@@ -1,0 +1,68 @@
+/*
+O tamanho de um arquivo digital pode ser medido em Byte[B], ou qualquer
+uma de suas escalas refenciadas abaixo:
+Kylobyte  1KB = 1024B
+Megabyte  1KB = 1024KB
+Gigabyte  1KB = 1024MB
+Terabyte  1KB = 1024GB
+Petabyte  1KB = 1024TB
+Exabyte  1KB = 1024PB
+Zettabyte  1KB = 1024EB
+Yottabyte  1KB = 1024ZB
+
+Programe uma função que receba um inteiro representando o tamnaho de
+um arquivo, em Bytes, e retorne uma string com este tamanho formatado 
+na maior escala possível, sendo que este número não pode ser menor que 1.
+
+Se o tamnho informado for 1000, o resultado correto seria '1000 B' invés 
+de '0.97 KB'. Utilize como padrão o número com duas casas decimais, 
+espaços em branco, mais a escla escolhida.
+*/
+
+
+/*code*/
+function converteBits(valor){
+    numvalor = Number(valor);
+    contador = 0;
+    medida = "Fora do escopo do programa";
+
+    if (numvalor < 1) {
+        return "Número menor que 1"
+    }else {
+        for(contador; (numvalor/1024)>1; contador++){
+            numvalor = numvalor/1024;
+        }
+    }
+    console.log(contador)
+    switch(contador) {
+        case 0:
+            medida = "B";
+            break;
+        case 1:
+             medida = "KB"
+        case 2:
+            medida = "MB";
+            break;
+        case 3:
+            medida = "GB";
+            break;
+        case 4:
+            medida = "TB";
+            break;
+        case 5:
+            medida = "PB";
+            break;
+        case 6:
+            medida = "EB";
+            break;
+        case 7:
+            medida = "ZB";
+            break;
+        case 8:
+            medida = "YB";
+            break;
+}
+    
+    return `O valor é: ${numvalor.toFixed(2)} ${medida}`
+
+}

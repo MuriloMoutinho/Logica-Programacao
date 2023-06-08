@@ -1,0 +1,19 @@
+/*CWI*/
+/*code*/
+function solucao(n) {
+      let numeroQuadradoPerfeito = 0;
+
+    if (n<0){
+      return -1
+    }else {
+      for(var i=1; i<n; i++){
+        if(Math.sqrt(i) % 1 === 0){
+          numeroQuadradoPerfeito = n+i;
+          if(Math.sqrt(numeroQuadradoPerfeito) % 1 === 0){
+                return i;
+          }
+        }
+      }
+      return -1;
+    }
+}

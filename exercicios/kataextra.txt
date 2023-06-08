@@ -1,0 +1,21 @@
+/*
+Implemente ma função, definida como validaComplexidade(valor), que deve 
+receber uma String e implementar algumas validações para garantir a 
+complexidade de uma senha.
+Deve ter entre 8 e 32 caracteres;
+deve ter, no mínimo, uma letra maiúscula, uma letra minúscula e um número
+não pode ter caractere de pontuação, acentuação ou espaço.
+deve retornar 1 quando atender os pré-requisitos e 0 quando não atender.
+*/
+
+
+/*code*/
+function validaComplexidade(valor){
+    var strvalor = String(valor);
+
+    if(strvalor.length > 8 && strvalor.length < 32 && (/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[\W])/.test(strvalor))  ){
+        return 1
+    }else{
+        return 0
+    }
+}

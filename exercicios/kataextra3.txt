@@ -1,0 +1,9 @@
+/*cwi-J*/
+/*code*/
+function frequencia(frase, palavra){
+    var strfrase = String(frase).toLowerCase();
+    var strpalavra = String(palavra).toLowerCase();
+    var regex = new RegExp(strpalavra,"g");
+    var quantidade = strfrase.match(regex)
+    return quantidade.length
+}
