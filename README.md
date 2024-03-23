@@ -8,5 +8,5 @@ O repositório está organizado da seguinte maneira:
 
 - **OBI**: Pasta contendo os exercícios da Olimpíada Brasileira de Informática.
 - **CodeWars**: Pasta contendo os exercícios do CodeWars.
-- **Processos Seletivos**: Pasta contendo os exercícios relacionados a processos seletivos.
-- **Outros**: Pasta contendo outros exercícios e desafios.
+- **Provas técnicas**: Pasta contendo os exercícios relacionados a processos seletivos.
+- **Beecrowd**: Pasta contendo outros exercícios e desafios.
