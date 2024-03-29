@@ -7,7 +7,7 @@ public class GorjetaGunther {
 		double conta = input.nextDouble();
 		input.close();
 		double contaComGorjeta = conta*1.10;
-		System.out.printf("$%.2f", contaComGorjeta);
+		System.out.printf("$%.2f%n", contaComGorjeta);
 	}
 
 }

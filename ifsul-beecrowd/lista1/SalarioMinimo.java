@@ -9,7 +9,7 @@ public class SalarioMinimo {
 		input.close();
 		
 		double quantidadeSalarioMinimo = salarioRecebido/salarioMinimo;
-		System.out.printf("%.2f salário (s) mínimo (s)",quantidadeSalarioMinimo);
+		System.out.printf("%.2f salário(s) mínimo(s)",quantidadeSalarioMinimo);
 
 	}
 

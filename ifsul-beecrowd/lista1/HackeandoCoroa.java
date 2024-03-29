@@ -18,7 +18,7 @@ public class HackeandoCoroa {
 
 	System.out.printf("%.1f (percentual de votos brancos)%n",calculaPorcentual(votosBrancos, votosTotais));
 	System.out.printf("%.1f (percentual de votos nulos)%n",calculaPorcentual(votosNulos, votosTotais));
-	System.out.printf("%.1f (percentual de votos válidos)%n",calculaPorcentual(votosValidos, votosTotais));
+	System.out.printf("%.1f (percentual de votos validos)%n",calculaPorcentual(votosValidos, votosTotais));
 	
 	}
 }

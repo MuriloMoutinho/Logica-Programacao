@@ -18,7 +18,7 @@ public class LucroRanjt {
 		double lucro = valorRecebido-valorGasolinaGasta;
 		
 		System.out.printf("Media de consumo: %.2f Km/l%n",mediaConsumoGasolina);
-		System.out.printf("Lucro: $%.2f", lucro);
+		System.out.printf("Lucro: $%.2f%n", lucro);
 	}
 
 }

@@ -8,6 +8,6 @@ public class ContaAtrasada {
 		double multasTotais = (contaLuz*1.02)+(contaAgua*1.02);
 		double salarioFinal = salario-multasTotais;
 		
-		System.out.printf("$%.2f",salarioFinal);
+		System.out.printf("$%.2f%n",salarioFinal);
 	}
 }

@@ -9,7 +9,7 @@ public class ReajusteSalario {
 		input.close();
 		
 		double salarioAjustado = salario * (reajuste/100 +1);
-		System.out.printf("R$%.2f",salarioAjustado);
+		System.out.printf("R$%.2f%n",salarioAjustado);
 
 	}
 
