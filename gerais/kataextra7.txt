@@ -1,0 +1,17 @@
+/*code*/
+function solucao(palavraCorreta, tentativa) {
+    let strpalavra = String(palavraCorreta);
+    let strresposta = String(tentativa);
+    let contador = 0;
+    
+    for(var i=0; strpalavra.length>i;i++){
+        if(strpalavra[i]==strresposta[i]){
+            contador++
+        }
+    }
+    
+    let resposta = (contador*100)/strpalavra.length;
+    
+    
+    return resposta;
+}

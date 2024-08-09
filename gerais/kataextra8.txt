@@ -1,0 +1,27 @@
+/*code*/
+function solucao(mapa) {
+    var x = 0;
+    var y = 0;
+    
+    mapa.map(function(direcao){ 
+    switch(direcao){
+      case "c":
+        y++;
+        break;
+      case "b":
+        y--;
+        break;
+      case "d":
+        x++;
+        break;
+      case "e":
+        x--;
+        break;
+    }}
+    )
+    
+    
+    var resposta = `X:${x},Y:${y}`
+    return resposta;
+
+}

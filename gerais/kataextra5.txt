@@ -1,0 +1,8 @@
+/*code*/
+function partidas(times,ordem){
+    var resultado = [];
+    for(var i=0; times.length>i; i=i+2){
+        resultado.push(`${times[ordem[i]-1]} x ${times[ordem[i+1]-1]}`)
+    }                                                      
+    return resultado
+}
